@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\C#\\Asp.Net-WebApi-Practice\\University-Api-Project\\University-Api\\University-Api.csproj": {}
+    "G:\\C#\\University-App\\University-Api-Project\\University-Api\\University-Api.csproj": {}
   },
   "projects": {
-    "G:\\C#\\Asp.Net-WebApi-Practice\\University-Api-Project\\University-Api\\University-Api.csproj": {
+    "G:\\C#\\University-App\\University-Api-Project\\University-Api\\University-Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\C#\\Asp.Net-WebApi-Practice\\University-Api-Project\\University-Api\\University-Api.csproj",
+        "projectUniqueName": "G:\\C#\\University-App\\University-Api-Project\\University-Api\\University-Api.csproj",
         "projectName": "University-Api",
-        "projectPath": "G:\\C#\\Asp.Net-WebApi-Practice\\University-Api-Project\\University-Api\\University-Api.csproj",
+        "projectPath": "G:\\C#\\University-App\\University-Api-Project\\University-Api\\University-Api.csproj",
         "packagesPath": "C:\\Users\\Jahid Uddin\\.nuget\\packages\\",
-        "outputPath": "G:\\C#\\Asp.Net-WebApi-Practice\\University-Api-Project\\University-Api\\obj\\",
+        "outputPath": "G:\\C#\\University-App\\University-Api-Project\\University-Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jahid Uddin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,36 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
