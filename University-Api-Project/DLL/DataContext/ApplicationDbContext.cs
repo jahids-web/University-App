@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using University_Api.Model;
 
 namespace DLL.DataContext
 {
@@ -11,8 +12,8 @@ namespace DLL.DataContext
         {
         }
 
-        //public DbSet<Department> Departments { get; set; }
-        //public DbSet<Student> Students { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Student> Students { get; set; }
 
 
     }
