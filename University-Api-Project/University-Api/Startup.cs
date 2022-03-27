@@ -37,7 +37,7 @@ namespace University_Api
                 config.DefaultApiVersion = new ApiVersion(1, 0);
                 config.AssumeDefaultVersionWhenUnspecified = true;
             });
-            DLLDependency.ALLDependency(services, Configuration);
+            DLLDependency.ALLDependency(services,Configuration);
           
         }
 
