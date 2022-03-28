@@ -8,7 +8,7 @@ namespace DLL
 {
     public class DLLDependency
     {
-        public static void ALLDependency(IServiceCollection services, IConfiguration configuration)
+        public static void AllDependency(IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
               options.UseSqlServer(configuration.GetConnectionString("ConnectDatabase")));

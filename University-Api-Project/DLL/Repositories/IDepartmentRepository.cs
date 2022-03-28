@@ -10,10 +10,9 @@ namespace DLL.Repositories
     {
         Task<Department> InsertAsync(Department department);
         Task<List<Department>> GetAllAsync();
-        Task<Department> GatAAsync(string code);
+        Task<Department> GetAAsync(string code);
         Task<Department> UpdateAsync(string code, Department department);
         Task<Department> DeleteAsync(string code);
-      
     }
     public class DepartmentRepository:IDepartmentRepository
     {
@@ -34,7 +33,7 @@ namespace DLL.Repositories
         {
             return await _context.Departments.ToListAsync();
         }
-        public async Task<Department> GatAAsync(string code)
+        public async Task<Department> GetAAsync(string code)
         {
             var department = await _context.Departments.FirstOrDefaultAsync(x => x.Code == code);
             return department;
