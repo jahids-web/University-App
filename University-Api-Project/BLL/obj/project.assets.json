@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Antlr/3.5.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/Antlr3.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/Antlr3.Runtime.dll": {}
+        }
+      },
+      "ExpressionEvaluator/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Antlr": "3.5.0.2"
+        },
+        "compile": {
+          "lib/net40/ExpressionEvaluator.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ExpressionEvaluator.dll": {}
+        }
+      },
       "FluentValidation/8.6.2": {
         "type": "package",
         "dependencies": {
@@ -41,6 +62,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
+      "GSF.Core/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "ExpressionEvaluator": "2.0.4"
+        },
+        "compile": {
+          "lib/net46/GSF.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net46/GSF.Core.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1310,6 +1343,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "GSF.Core": "2.4.2",
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4"
         },
@@ -1333,6 +1367,31 @@
     }
   },
   "libraries": {
+    "Antlr/3.5.0.2": {
+      "sha512": "CSfrVuDVMx3OrQhT84zed+tOdM1clljyRLWWlQM22fJsmG836RVDGQlE6tzysXh8X8p9UjkHbLr6OqEIVhtdEA==",
+      "type": "package",
+      "path": "antlr/3.5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr.3.5.0.2.nupkg.sha512",
+        "antlr.nuspec",
+        "lib/Antlr3.Runtime.dll",
+        "lib/Antlr3.Runtime.pdb"
+      ]
+    },
+    "ExpressionEvaluator/2.0.4": {
+      "sha512": "w8RqBrK5YkjgXmLE0M6PKcULee3/fVaz+aIt1lOEhyyb0PYIqGvbyovmZ9Mp5WCFV6EnUjxxkoEc4MS6wlyy5Q==",
+      "type": "package",
+      "path": "expressionevaluator/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "expressionevaluator.2.0.4.nupkg.sha512",
+        "expressionevaluator.nuspec",
+        "lib/net40/ExpressionEvaluator.dll"
+      ]
+    },
     "FluentValidation/8.6.2": {
       "sha512": "N2vz+f6pAX9AI19hu83U2LJjjc/ETzWGlICVanu3DIG76QhzEu3PR/CQSFBX69PRuBTivrW4jhBzeV7dXIfqyw==",
       "type": "package",
@@ -1380,6 +1439,20 @@
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "GSF.Core/2.4.2": {
+      "sha512": "owqlIxUku0+aLwCKEvrXtajacPZ8GghASXDDERhTcsy/8/iCaKzojKoxqOXSoHJT6hobsLxucEAwH/xJ4lEGVA==",
+      "type": "package",
+      "path": "gsf.core/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gsf.core.2.4.2.nupkg.sha512",
+        "gsf.core.nuspec",
+        "images/GSF64x64.png",
+        "lib/net46/GSF.Core.XML",
+        "lib/net46/GSF.Core.dll"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -5167,5 +5240,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Antlr 3.5.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ExpressionEvaluator 2.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "ExpressionEvaluator",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'GSF.Core 2.4.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "GSF.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

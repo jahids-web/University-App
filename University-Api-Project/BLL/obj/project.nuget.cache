@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "77ThT4yWt8gUr2opCTb1UqM2pkjJ2gFkI4GI0qsMb+Awq4TjxUJu1ki5BL1O8AMzm1mazKVw43qd+GQEB+xDmw==",
+  "dgSpecHash": "fYYTKujHdCEVWW5AGlZn17MCbZiPuegI7mD44ggyaFn9CuD6Q00LZcWjrcanxFkhQ3mQpmUXCyfCFmrCy4axiA==",
   "success": true,
   "projectFilePath": "G:\\C#\\University-App\\University-Api-Project\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\antlr\\3.5.0.2\\antlr.3.5.0.2.nupkg.sha512",
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\expressionevaluator\\2.0.4\\expressionevaluator.2.0.4.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\gsf.core\\2.4.2\\gsf.core.2.4.2.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -94,5 +97,36 @@
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Antlr 3.5.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ExpressionEvaluator 2.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "ExpressionEvaluator",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'GSF.Core 2.4.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "GSF.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
