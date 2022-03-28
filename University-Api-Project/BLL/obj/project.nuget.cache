@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GT43Aw1gT3PHddhCr0Pe5bduIR8v4OGaDyoR3DOwJBkGd6Fd5LRaGzNblsAQfU3B/Z4h23BlvwPS4sMpSVKWag==",
+  "dgSpecHash": "rqD0BHihhd5aD+iHmTNKbAzDWJHBgFXLBwSNKBUXzA7vLeXbw9l4EMhUaMzTelgeUIxCxZg+zWelW86ZP6KY5g==",
   "success": true,
   "projectFilePath": "G:\\C#\\University-App\\University-Api-Project\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
