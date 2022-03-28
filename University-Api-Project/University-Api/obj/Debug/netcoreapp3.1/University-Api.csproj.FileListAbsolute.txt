@@ -68,3 +68,6 @@ G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.dll
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.pdb
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.genruntimeconfig.cache
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\Antlr3.Runtime.dll
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\ExpressionEvaluator.dll
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\GSF.Core.dll
