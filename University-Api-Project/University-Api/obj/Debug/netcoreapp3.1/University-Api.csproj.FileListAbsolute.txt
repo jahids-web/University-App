@@ -35,6 +35,7 @@ G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
@@ -44,7 +45,9 @@ G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\BLL.dll
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\DLL.dll
+G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\BLL.pdb
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\DLL.pdb
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.AssemblyReference.cache
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.GeneratedMSBuildEditorConfig.editorconfig

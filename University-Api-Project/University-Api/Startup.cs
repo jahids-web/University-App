@@ -1,3 +1,4 @@
+using BLL;
 using DLL;
 using DLL.DataContext;
 using Microsoft.AspNetCore.Builder;
@@ -37,7 +38,9 @@ namespace University_Api
                 config.DefaultApiVersion = new ApiVersion(1, 0);
                 config.AssumeDefaultVersionWhenUnspecified = true;
             });
-            DLLDependency.ALLDependency(services,Configuration);
+
+            DLLDependency.AllDependency(services,Configuration);
+            BLLDependency.AllDependency(services,Configuration);
           
         }
 
