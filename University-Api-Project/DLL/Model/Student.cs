@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DLL.Model.Interfaces;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace University_Api.Model
 {
-    public class Student
+    public class Student:ISoftDeletable
     {
         [Key]
         public int StudentId { get; set; }
