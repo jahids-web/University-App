@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using University_Api.Model;
+using Utility.Exceptions;
 
 namespace BLL.Services
 {
@@ -26,23 +27,51 @@ namespace BLL.Services
         }
         public async Task<Student> InsertAsync(Student student)
         {
-            return await _studentRepository.InsertAsync(student);
+            await _studentRepository.CreateAsync(student);
+            if (await _studentRepository.SaveCompletedAsync())
+            {
+                return student;
+            }
+            throw new ApplicationValidationExcetion("Insert Have Some Problem");
         }
         public async Task<List<Student>> GetAllAsync()
         {
-            return await _studentRepository.GetAllAsync();
+            return await _studentRepository.GetList();
         }
         public async Task<Student> GetAAsync(string email)
         {
-            return await _studentRepository.GetAAsync(email);
+            return await _studentRepository.FindSingleAsync(x =>x.Email == email);
         }
         public async Task<Student> UpdateAsync(string email, Student student)
         {
-            return await _studentRepository.UpdateAsync(email,student);
+            var dbStudent = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            if(dbStudent == null)
+            {
+                throw new AccessViolationException("Student Not Found");
+            }
+
+            dbStudent.Name = student.Name;
+            dbStudent.Email = student.Email;
+            _studentRepository.Update(dbStudent);
+            if (await _studentRepository.SaveCompletedAsync())
+            {
+                return dbStudent;
+            }
+            throw new ApplicationValidationExcetion("Update Has Some Issue");
         }
         public async Task<Student> DeleteAsync(string email)
         {
-            return await _studentRepository.DeleteAsync(email);
+            var dbStudent = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            if (dbStudent == null)
+            {
+                throw new AccessViolationException("Student Not Found");
+            }
+            _studentRepository.Delete(dbStudent);
+            if (await _studentRepository.SaveCompletedAsync())
+            {
+                return dbStudent;
+            }
+            throw new ApplicationValidationExcetion("Delete Has Some Issue");
         }
 
        
