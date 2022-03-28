@@ -1,4 +1,5 @@
-﻿using BLL.Services;
+﻿using BLL.Request;
+using BLL.Services;
 using DLL.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,9 @@ namespace University_Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert(Department department)
+        public async Task<IActionResult> Insert(DepartmentInsertRequestViewMolel request)
         {
-            return Ok(await _departmentService.InsertAsync(department));
+            return Ok(await _departmentService.InsertAsync(request));
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
