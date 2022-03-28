@@ -1,6 +1,7 @@
 using BLL;
 using DLL;
 using DLL.DataContext;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +31,7 @@ namespace University_Api
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation();
             SetupSwagger(services);
 
             services.AddApiVersioning(config =>
