@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RO2iVD5HIhCbkzawe/1xiiAOjB34BcqDIPHB8O9UWm/Ek6L4URJw0aiXIyuSQJaytDaGRijT/zn6FBvwjnjm1w==",
+  "dgSpecHash": "5owmkJUv/9Gw8hCP5erw+p4bE+uCjemFOXg6m8a++6fNmE8bf/BF3g8AVadyHbPQ1VXoL1l70pXo3uXYaA9BAQ==",
   "success": true,
   "projectFilePath": "G:\\C#\\University-App\\University-Api-Project\\University-Api\\University-Api.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jahid Uddin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Jahid Uddin\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

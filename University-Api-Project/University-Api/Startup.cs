@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using University_Api.MIddleware;
 
 namespace University_Api
 {
@@ -76,6 +77,7 @@ namespace University_Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMiddleware<ExceptionMiddleware>();
             //
             app.UseSwagger();
 
