@@ -1,7 +1,5 @@
 ﻿using BLL.Request;
 using BLL.Services;
-using DLL.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using University_Api.Model;
