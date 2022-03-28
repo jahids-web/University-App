@@ -33,9 +33,9 @@ namespace University_Api.Controllers
         }
 
         [HttpPut("{code}")]
-        public async Task<IActionResult> Update(string code, Department department)
+        public async Task<IActionResult> Update(string code, DepartmentInsertRequestViewMolel adepartment)
         {
-            return Ok(await _departmentService.UpdateAsync(code, department));
+            return Ok(await _departmentService.UpdateAsync(code, adepartment));
         }
 
         [HttpDelete("{code}")]
