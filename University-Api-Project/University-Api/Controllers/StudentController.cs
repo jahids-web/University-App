@@ -1,4 +1,5 @@
-﻿using BLL.Services;
+﻿using BLL.Request;
+using BLL.Services;
 using DLL.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,9 @@ namespace University_Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert(Student student)
+        public async Task<IActionResult> Insert(StudentInsertRequestViewMolde studentRequest)
         {
-            return Ok(await _studentService.InsertAsync(student));
+            return Ok(await _studentService.InsertAsync(studentRequest));
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
