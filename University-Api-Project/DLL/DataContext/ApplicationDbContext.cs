@@ -1,4 +1,5 @@
-﻿using DLL.Model.Interfaces;
+﻿using DLL.Model;
+using DLL.Model.Interfaces;
 using GSF;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -22,6 +23,7 @@ namespace DLL.DataContext
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
 
         private const string IsDeletedProperty = "IsDeleted";
@@ -48,7 +50,18 @@ namespace DLL.DataContext
 
                 }
             }
-         
+            modelBuilder.Entity<CourseStudent>()
+           .HasKey(bc => new { bc.CourseId, bc.StudentId });
+            modelBuilder.Entity<CourseStudent>()
+                .HasOne(bc => bc.Couse)
+                .WithMany(b => b.CourseStudents)
+                .HasForeignKey(bc => bc.CourseId);
+            modelBuilder.Entity<CourseStudent>()
+                .HasOne(bc => bc.Student)
+                .WithMany(c => c.CourseStudents)
+                .HasForeignKey(bc => bc.StudentId);
+            base.OnModelCreating(modelBuilder);
+           
         }
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -67,8 +80,6 @@ namespace DLL.DataContext
                 {
                     switch (entry.State)
                     {
-
-                  
                         case EntityState.Deleted:
                             entry.Property(IsDeletedProperty).CurrentValue = true;
                             entry.State = EntityState.Modified;
