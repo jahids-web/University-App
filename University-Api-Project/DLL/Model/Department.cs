@@ -1,5 +1,6 @@
 ﻿using DLL.Model.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -18,5 +19,7 @@ namespace University_Api.Model
 
         public DateTime DateTime { get; set; } = DateTime.Now;
         public DateTime CreatedDate { get;  set; }
+
+        public ICollection<Student> Students { get; set; }
     }
 }
