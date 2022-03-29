@@ -1,4 +1,5 @@
-﻿using DLL.Repositories;
+﻿using BLL.Request;
+using DLL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,11 +11,14 @@ namespace BLL.Services
 {
     public interface IStudentService
     {
-        Task<Student> InsertAsync(Student student);
+        Task<Student> InsertAsync(StudentInsertRequestViewMolde studentRequest);
         Task<List<Student>> GetAllAsync();
         Task<Student> GetAAsync(string email);
         Task<Student> UpdateAsync(string email, Student student);
         Task<Student> DeleteAsync(string email);
+
+        Task<bool> EmailExists(string email);
+        
     }
 
     public class StudentService : IStudentService
@@ -25,8 +29,14 @@ namespace BLL.Services
         {
             _studentRepository = studentRepository;
         }
-        public async Task<Student> InsertAsync(Student student)
+        public async Task<Student> InsertAsync(StudentInsertRequestViewMolde studentRequest)
         {
+            var student = new Student()
+            {
+                Email = studentRequest.Email,
+                Name = studentRequest.Name,
+                DepartmentId = studentRequest.DepartmentId
+            };
             await _studentRepository.CreateAsync(student);
             if (await _studentRepository.SaveCompletedAsync())
             {
@@ -74,6 +84,15 @@ namespace BLL.Services
             throw new ApplicationValidationExcetion("Delete Has Some Issue");
         }
 
-       
+        public async Task<bool> EmailExists(string email)
+        {
+            var student = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            if(student == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }
