@@ -1,3 +1,8 @@
+G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.AssemblyReference.cache
+G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\BLL.dll
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
@@ -5,11 +10,6 @@ G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\DLL.dll
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\Utility.dll
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\DLL.pdb
 G:\C#\University-App\University-Api-Project\BLL\bin\Debug\netcoreapp3.1\Utility.pdb
-G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.AssemblyReference.cache
-G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.GeneratedMSBuildEditorConfig.editorconfig
-G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
-G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
-G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
 G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
 G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.dll
 G:\C#\University-App\University-Api-Project\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
