@@ -10,6 +10,7 @@ namespace DLL.IUnitOfWork
         IDepartmentRepository DepartmentRepository { get; }
         IStudentRepository StudentRepository { get; }
         ICourseRepository CourseRepository { get; }
+        ICourseStudentRepository CourseStudentRepository { get; }
         Task<int> SaveChangesAsync();
         Task<bool> SaveCompletedAsync();
     }
@@ -26,6 +27,7 @@ namespace DLL.IUnitOfWork
         private IDepartmentRepository _departmentRepository;
         private IStudentRepository _studentRepository;
         private ICourseRepository _courseRepository;
+        private ICourseStudentRepository _courseStudentRepository;
 
 
         public IDepartmentRepository DepartmentRepository => 
@@ -36,6 +38,8 @@ namespace DLL.IUnitOfWork
 
         public ICourseRepository CourseRepository =>
             _courseRepository ??= new CourseRepository(_context);
+        public ICourseStudentRepository CourseStudentRepository =>
+           _courseStudentRepository ??= new CourseStudentRepository(_context);
 
         public async Task<bool> ApplicationSaveChangesAsync()
         {
