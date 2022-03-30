@@ -21,10 +21,10 @@ namespace BLL.Request
         {
             _serviceProvider = serviceProvider;
             RuleFor(x => x.Name).NotNull().NotEmpty()
-                .MinimumLength(4).MaximumLength(25).MustAsync(NameExists).WithMessage("Name Ecists In Our System");
+                .MinimumLength(4).MaximumLength(25).MustAsync(NameExists).WithMessage("Name Exists In Our System");
 
             RuleFor(x => x.Code).NotNull().NotEmpty()
-                .MinimumLength(3).MaximumLength(10).MustAsync(CodeExists).WithMessage("Code Ecists In Our System");
+                .MinimumLength(3).MaximumLength(10).MustAsync(CodeExists).WithMessage("Code Exists In Our System");
 
             RuleFor(x => x.Credit).NotNull().NotEmpty();
               
