@@ -19,7 +19,8 @@ namespace BLL.Services
         Task<Student> DeleteAsync(string email);
 
         Task<bool> EmailExists(string email);
-        
+
+        Task<bool> IsIdExists(int studentId);
     }
 
     public class StudentService : IStudentService
@@ -89,6 +90,16 @@ namespace BLL.Services
         {
             var student = await _unitOfWork.StudentRepository.FindSingleAsync(x => x.Email == email);
             if(student == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> IsIdExists(int id)
+        {
+            var student = await _unitOfWork.StudentRepository.FindSingleAsync(x => x.StudentId == id);
+            if (student == null)
             {
                 return true;
             }

@@ -18,8 +18,8 @@ namespace BLL.Services
         Task<Course> DeleteAsync(string code);
         Task<bool> IsCodeExists(string code);
         Task<bool> IsNameExists(string name);
-
-      
+        Task<bool> IsIdExists(string id);
+        Task<bool> IsIdExists(int courseId);
     }
 
     public class CourseService : ICourseService
@@ -124,7 +124,15 @@ namespace BLL.Services
             }
             return false;
         }
+        public async Task<bool> IsIdExists(int id)
+        {
+            var course = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.CourseId == id);
+            if (course == null)
+            {
+                return true;
+            }
+            return false;
+        }
 
-      
     }
 }
