@@ -1,3 +1,9 @@
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.AssemblyReference.cache
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.AssemblyInfoInputs.cache
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.AssemblyInfo.cs
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.CoreCompileInputs.cache
+G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.MvcApplicationPartsAssemblyInfo.cache
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\appsettings.json
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\University-Api.exe
@@ -61,13 +67,6 @@ G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\BLL.pdb
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\DLL.pdb
 G:\C#\University-App\University-Api-Project\University-Api\bin\Debug\netcoreapp3.1\Utility.pdb
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.AssemblyReference.cache
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.GeneratedMSBuildEditorConfig.editorconfig
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.AssemblyInfoInputs.cache
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.AssemblyInfo.cs
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.CoreCompileInputs.cache
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.MvcApplicationPartsAssemblyInfo.cs
-G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.MvcApplicationPartsAssemblyInfo.cache
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\staticwebassets\University-Api.StaticWebAssets.Manifest.cache
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.RazorTargetAssemblyInfo.cache
 G:\C#\University-App\University-Api-Project\University-Api\obj\Debug\netcoreapp3.1\University-Api.csproj.CopyComplete
