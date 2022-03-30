@@ -1,4 +1,5 @@
 ﻿using BLL.Request;
+using DLL.IUnitOfWork;
 using DLL.Repositories;
 using System;
 using System.Collections.Generic;
@@ -23,11 +24,11 @@ namespace BLL.Services
 
     public class StudentService : IStudentService
     {
-        private readonly IStudentRepository _studentRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public StudentService(IStudentRepository studentRepository)
+        public StudentService(IUnitOfWork unitOfWork)
         {
-            _studentRepository = studentRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<Student> InsertAsync(StudentInsertRequestViewMolde studentRequest)
         {
@@ -37,8 +38,8 @@ namespace BLL.Services
                 Name = studentRequest.Name,
                 DepartmentId = studentRequest.DepartmentId
             };
-            await _studentRepository.CreateAsync(student);
-            if (await _studentRepository.SaveCompletedAsync())
+            await _unitOfWork.StudentRepository.CreateAsync(student);
+            if (await _unitOfWork.SaveCompletedAsync())
             {
                 return student;
             }
@@ -46,15 +47,15 @@ namespace BLL.Services
         }
         public async Task<List<Student>> GetAllAsync()
         {
-            return await _studentRepository.GetList();
+            return await _unitOfWork.StudentRepository.GetList();
         }
         public async Task<Student> GetAAsync(string email)
         {
-            return await _studentRepository.FindSingleAsync(x =>x.Email == email);
+            return await _unitOfWork.StudentRepository.FindSingleAsync(x =>x.Email == email);
         }
         public async Task<Student> UpdateAsync(string email, Student student)
         {
-            var dbStudent = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            var dbStudent = await _unitOfWork.StudentRepository.FindSingleAsync(x => x.Email == email);
             if(dbStudent == null)
             {
                 throw new AccessViolationException("Student Not Found");
@@ -62,8 +63,8 @@ namespace BLL.Services
 
             dbStudent.Name = student.Name;
             dbStudent.Email = student.Email;
-            _studentRepository.Update(dbStudent);
-            if (await _studentRepository.SaveCompletedAsync())
+            _unitOfWork.StudentRepository.Update(dbStudent);
+            if (await _unitOfWork.SaveCompletedAsync())
             {
                 return dbStudent;
             }
@@ -71,13 +72,13 @@ namespace BLL.Services
         }
         public async Task<Student> DeleteAsync(string email)
         {
-            var dbStudent = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            var dbStudent = await _unitOfWork.StudentRepository.FindSingleAsync(x => x.Email == email);
             if (dbStudent == null)
             {
                 throw new AccessViolationException("Student Not Found");
             }
-            _studentRepository.Delete(dbStudent);
-            if (await _studentRepository.SaveCompletedAsync())
+            _unitOfWork.StudentRepository.Delete(dbStudent);
+            if (await _unitOfWork.SaveCompletedAsync())
             {
                 return dbStudent;
             }
@@ -86,7 +87,7 @@ namespace BLL.Services
 
         public async Task<bool> EmailExists(string email)
         {
-            var student = await _studentRepository.FindSingleAsync(x => x.Email == email);
+            var student = await _unitOfWork.StudentRepository.FindSingleAsync(x => x.Email == email);
             if(student == null)
             {
                 return true;

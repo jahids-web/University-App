@@ -1,4 +1,5 @@
 ﻿using BLL.Request;
+using DLL.IUnitOfWork;
 using DLL.Model;
 using DLL.Repositories;
 using System.Collections.Generic;
@@ -23,11 +24,11 @@ namespace BLL.Services
 
     public class CourseService : ICourseService
     {
-        private readonly ICourseRepository _courseRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CourseService(ICourseRepository courseRepository)
+        public CourseService(IUnitOfWork unitOfWork)
         {
-            _courseRepository = courseRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<Course> InsertAsync(CourseInsertRequestViewMolel request)
         {
@@ -35,8 +36,8 @@ namespace BLL.Services
             course.Code = request.Code;
             course.Name = request.Name;
             course.Credit = request.Credit;
-            await _courseRepository.CreateAsync(course);
-            if(await _courseRepository.SaveCompletedAsync())
+            await _unitOfWork.CourseRepository.CreateAsync(course);
+            if(await _unitOfWork.SaveCompletedAsync())
             {
                 return course;
             }
@@ -46,12 +47,12 @@ namespace BLL.Services
 
         public async Task<List<Course>> GetAllAsync()
         {
-            return await _courseRepository.GetList();
+            return await _unitOfWork.CourseRepository.GetList();
         }
 
         public async Task<Course> GetAAsync(string code)
         {
-            var course = await _courseRepository.FindSingleAsync(x => x.Code == code);
+            var course = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Code == code);
             if (course == null)
             {
                 throw new ApplicationValidationExcetion("Department Not Found");
@@ -60,14 +61,14 @@ namespace BLL.Services
         }
         public async Task<Course> UpdateAsync(string code, Course aCourse)
         {
-            var course = await _courseRepository.FindSingleAsync(x=>x.Code == code);
+            var course = await _unitOfWork.CourseRepository.FindSingleAsync(x=>x.Code == code);
             if (course == null)
             {
                 throw new ApplicationValidationExcetion("Department Not Found");
             }
             if (!string.IsNullOrWhiteSpace(aCourse.Code))
             {
-                var existsAlreadyCode = await _courseRepository.FindSingleAsync(x => x.Code == aCourse.Code);
+                var existsAlreadyCode = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Code == aCourse.Code);
                 if (existsAlreadyCode != null)
                 {
                     throw new ApplicationValidationExcetion("Your Updated Code Alredy Present System");
@@ -76,15 +77,15 @@ namespace BLL.Services
             }
             if (!string.IsNullOrWhiteSpace(aCourse.Name))
             {
-                var existsAlreadyCode = await _courseRepository.FindSingleAsync(x => x.Name == aCourse.Name);
+                var existsAlreadyCode = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Name == aCourse.Name);
                 if (existsAlreadyCode != null)
                 {
                     throw new ApplicationValidationExcetion("Your Updated Name Alredy Present System");
                 }
                 course.Name = aCourse.Name;
             }
-            _courseRepository.Update(course);
-            if (await _courseRepository.SaveCompletedAsync())
+            _unitOfWork.CourseRepository.Update(course);
+            if (await _unitOfWork.SaveCompletedAsync())
             {
                 return course;
             }
@@ -92,12 +93,12 @@ namespace BLL.Services
         }
         public async Task<Course> DeleteAsync(string code)
         {
-            var course = await _courseRepository.FindSingleAsync(x => x.Code == code);
+            var course = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Code == code);
             if (course == null){
                 throw new ApplicationValidationExcetion("Course Not Found");
             }
-            _courseRepository.Delete(course);
-            if (await _courseRepository.SaveCompletedAsync())
+            _unitOfWork.CourseRepository.Delete(course);
+            if (await _unitOfWork.SaveCompletedAsync())
             {
                 return course;
             }
@@ -106,7 +107,7 @@ namespace BLL.Services
 
         public async Task<bool> IsCodeExists(string code)
         {
-            var department = await _courseRepository.FindSingleAsync(x => x.Code == code);
+            var department = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Code == code);
             if (department == null)
             {
                 return true;
@@ -116,7 +117,7 @@ namespace BLL.Services
 
         public async Task<bool> IsNameExists(string name)
         {
-            var department = await _courseRepository.FindSingleAsync(x => x.Name == name);
+            var department = await _unitOfWork.CourseRepository.FindSingleAsync(x => x.Name == name);
             if (department == null)
             {
                 return true;
