@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DLL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220329101847_CoureTableAndStudentCourseMigration")]
-    partial class CoureTableAndStudentCourseMigration
+    [Migration("20220331125336_ApiMigration")]
+    partial class ApiMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,7 +48,7 @@ namespace DLL.Migrations
 
                     b.HasKey("CourseId");
 
-                    b.ToTable("Course");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("DLL.Model.CourseStudent", b =>
@@ -72,7 +72,7 @@ namespace DLL.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("CourseStudent");
+                    b.ToTable("CourseStudents");
                 });
 
             modelBuilder.Entity("University_Api.Model.Department", b =>

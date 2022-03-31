@@ -11,7 +11,7 @@ namespace DLL.IUnitOfWork
         IStudentRepository StudentRepository { get; }
         ICourseRepository CourseRepository { get; }
         ICourseStudentRepository CourseStudentRepository { get; }
-        Task<int> SaveChangesAsync();
+       
         Task<bool> SaveCompletedAsync();
     }
     public class UnitOfWork : IUnitOfWork, IDisposable
@@ -41,7 +41,7 @@ namespace DLL.IUnitOfWork
         public ICourseStudentRepository CourseStudentRepository =>
            _courseStudentRepository ??= new CourseStudentRepository(_context);
 
-        public async Task<bool> ApplicationSaveChangesAsync()
+        public async Task<bool> SaveCompletedAsync()
         {
             return await _context.SaveChangesAsync() > 0;
         }
@@ -72,15 +72,9 @@ namespace DLL.IUnitOfWork
             return await _context.SaveChangesAsync() > 0;
         }
 
-        Task<int> IUnitOfWork.SaveChangesAsync()
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public Task<bool> SaveCompletedAsync()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
 

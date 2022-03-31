@@ -12,7 +12,7 @@ namespace BLL.Services
 {
     public interface ICourseStudentService
     {
-        Task<object> InsertAsyce(CourseAssignInsertViewModel request);
+        Task<ApiSussessResponce> InsertAsyce(CourseAssignInsertViewModel request);
     }
 
     public class CourseStudentService : ICourseStudentService

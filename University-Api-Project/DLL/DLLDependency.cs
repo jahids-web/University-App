@@ -19,7 +19,7 @@ namespace DLL
             //services.AddTransient<IStudentRepository, StudentRepository>();
             //services.AddTransient<ICourseRepository, CourseRepository>();
 
-            services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            services.AddTransient<IUnitOfWork.IUnitOfWork, UnitOfWork>();
 
 
         }

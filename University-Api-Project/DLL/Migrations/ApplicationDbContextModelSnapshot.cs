@@ -46,7 +46,7 @@ namespace DLL.Migrations
 
                     b.HasKey("CourseId");
 
-                    b.ToTable("Course");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("DLL.Model.CourseStudent", b =>
@@ -70,7 +70,7 @@ namespace DLL.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("CourseStudent");
+                    b.ToTable("CourseStudents");
                 });
 
             modelBuilder.Entity("University_Api.Model.Department", b =>
